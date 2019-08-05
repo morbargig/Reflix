@@ -1,0 +1,91 @@
+body {
+  background-color: black ;
+}
+#main-links > a{
+  margin: 10px;
+  color: #34495e;
+  text-shadow: -1px -1px 0 #ecf0f1, 1px -1px 0 #ecf0f1, -1px 1px 0 #ecf0f1, 1px 1px 0 #ecf0f1;
+}
+
+*{
+  text-decoration: none;
+  font-family: 'Cinzel Decorative'
+}
+
+a{
+  cursor: pointer;
+  color: white;
+}
+
+#home-background{
+  /* background-image: url(https://wallpapertag.com/wallpaper/full/c/7/3/564392-most-popular-fantasy-nature-wallpaper-1920x1080.jpg); */
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+h1 {
+  cursor: pointer;
+  color: white;
+}
+
+.users{
+  background-color: red;
+  color: black;
+  width: 100px;
+  height: 100px;
+}
+
+img{
+  width: 30vw;
+  height: 35vh;
+}
+
+#users {
+  height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  text-align: center;
+  grid-gap: 10px;
+  font-size: 3vh;
+ }
+ .user {
+  border: 2px solid black;
+ }
+ span {
+  margin: 2px;
+ }
+
+ .mor{
+   background-color: red;
+ }
+
+ .roni{
+  background-color: blue;
+}
+
+.maya{
+  background-color: yellow;
+}
+.bar{
+  background-color: green;
+  /* margin-top: 10px; */
+}
+
+.year{
+  color: white
+}
+.Budget{
+  color: white;
+  text-align: right;
+  margin-top: 0px;
+  margin-right: 15px
+}
