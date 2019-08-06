@@ -23,7 +23,7 @@ class App extends Component {
           name: "mor",
           color: "red",
           isRented: [0, 1, 2],
-          Budget: 80,
+          Budget: 10,
         },
         {
           id: 1,
@@ -88,7 +88,7 @@ class App extends Component {
   }
 
   isRented = (e) => {
-    console.log(e)
+    // console.log(e)
     let movies = [...this.state.movies]
     let Budget = this.state.Budget
     if (movies[e].isRented === false) {
@@ -99,17 +99,21 @@ class App extends Component {
           movies: movies,
           Budget: Budget
         }, function () {
-          let newArryIsRented = []
-          let RentedMovies = movies.filter(c => c.isRented === true)
-          RentedMovies.map(x => {
-            newArryIsRented.push(x.id)
-          })
-          console.log(newArryIsRented)
-          let userNow = localStorage.getItem('now')
-          let b = JSON.parse(localStorage.getItem(userNow))
-          b.isRented = newArryIsRented
-          b.Budget = Budget
-          window.localStorage.setItem(userNow, JSON.stringify(b))
+          //i nedd to do something with that that when i in the ragoler catlog it dont work
+          // console.log(localStorage.getItem('now'))
+          if (localStorage.getItem('now') !== "catlog") {
+            let newArryIsRented = []
+            let RentedMovies = movies.filter(c => c.isRented === true)
+            RentedMovies.map(x => {
+              newArryIsRented.push(x.id)
+            })
+            // console.log(newArryIsRented)
+            let userNow = localStorage.getItem('now')
+            let b = JSON.parse(localStorage.getItem(userNow))
+            b.isRented = newArryIsRented
+            b.Budget = Budget
+            window.localStorage.setItem(userNow, JSON.stringify(b))
+          }
         }
         )
       } else { alert(`you can't aport to buy ${movies[e].title} becuse you have only ${this.state.Budget}$ and it Cost ${movies[e].price}$`) }
@@ -120,19 +124,24 @@ class App extends Component {
         movies: movies,
         Budget: Budget
       }, function () {
-        let newArryIsRented = []
-        let RentedMovies = movies.filter(c => c.isRented === true)
-        RentedMovies.map(x => {
-          newArryIsRented.push(x.id)
-        })
-        console.log(newArryIsRented)
-        let userNow = localStorage.getItem('now')
-        let b = JSON.parse(localStorage.getItem(userNow))
-        b.isRented = newArryIsRented
-        b.Budget = Budget
-        window.localStorage.setItem(userNow, JSON.stringify(b))
+        if (localStorage.getItem('now') !== "catlog") {
+          let newArryIsRented = []
+          let RentedMovies = movies.filter(c => c.isRented === true)
+          RentedMovies.map(x => {
+            newArryIsRented.push(x.id)
+          })
+          // console.log(newArryIsRented)
+          let userNow = localStorage.getItem('now')
+          let b = JSON.parse(localStorage.getItem(userNow))
+          b.isRented = newArryIsRented
+          b.Budget = Budget
+          window.localStorage.setItem(userNow, JSON.stringify(b))
+        }
       })
     }
+  }
+  catalog = () => {
+    window.localStorage.setItem('now', "catlog")
   }
 
   render() {
@@ -141,7 +150,7 @@ class App extends Component {
       <Router>
         <div>
           <Link to="/">Home  || </Link>
-          <Link to="/Catalog">Catalog </Link>
+          <Link to="/Catalog" onClick={this.catalog}>Catalog </Link>
           <div className="Budget">Budget: {this.state.Budget}$</div>
           <Route path="/" exact render={() => <Landing users={this.state.users} movies={this.state.movies} pushNewUser={this.pushNewUser} />} />
           <Route path="/Catalog" exact render={() => <Catalog movies={this.state.movies} isRented={this.isRented} />} />

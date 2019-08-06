@@ -30,6 +30,7 @@ class Catalog extends Component {
             sarchMoveis: this.props.movies
         })
     }
+    
 
     render() {
         let myNewData
