@@ -39,7 +39,6 @@ class Catalog extends Component {
                             img: res.data.Poster,
                             descrShort: res.data.Plot,
                             newMovie: true
-
                         }
                         this.setState({ newMovie })
                         console.log(newMovie)
