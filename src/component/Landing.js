@@ -42,9 +42,9 @@ class Landing extends Component {
                 <h1>Reflix</h1>
                 <h1>who's watching?</h1>
                 <div id="users">
-                    {this.props.users.map(u => <h4  className={u.name}><Link 
+                    {this.props.users.map(u => <h3  className={u.name}> <br></br> <Link 
                      onClick={this.localStorage}
-                      to="/Catalog">{u.name}</Link></h4>
+                      to="/Catalog">{u.name}</Link></h3>
                     )}
                 </div>
             </div>

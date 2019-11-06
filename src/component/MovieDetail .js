@@ -14,7 +14,7 @@ class MovieDetail extends Component {
         return (
             <div>
                 <h1>{m.title}</h1>
-                <img className="img" src={m.img} alt="" />
+                <img className="img" src={m.img} alt="" style={{width : 375 + "px" }} />
                 <br></br>
                 <div className="year"> {m.year}</div>
                 {/* <h1 onClick={this.isRented}> + </h1> */}
