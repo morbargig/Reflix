@@ -30,7 +30,7 @@ class Catalog extends Component {
             sarchMoveis: this.props.movies
         })
     }
-    
+
 
     render() {
         let myNewData
@@ -42,10 +42,11 @@ class Catalog extends Component {
 
         } return (
             < div >
-                <input type="text" value={this.state.testText} onChange={this.updateTestText} placeholder="sarch for a movie"/>
-                <h1>Rented :
-                {myNewData.filter(m => m.isRented == true).map(m => < Movie m={m} isRented={this.props.isRented} />)}
-                    Catalog :
+                {/* {console.log(myNewData.filter(m => m.isRented === true)[0] === undefined)} */}
+                <input type="text" value={this.state.testText} onChange={this.updateTestText} placeholder="sarch for a movie" />
+                <h1>   {myNewData.filter(m => m.isRented === true)[0] !== undefined ? "Rented :" : null}
+                    {myNewData.filter(m => m.isRented == true).map(m => < Movie m={m} isRented={this.props.isRented} />)}
+                    {myNewData.filter(m => m.isRented === false)[0] !== undefined ? "Movies :" : null}
                     {myNewData.filter(m => m.isRented == false).map(m => < Movie m={m} isRented={this.props.isRented} />)}
                 </h1>
             </div >)

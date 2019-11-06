@@ -144,6 +144,11 @@ class App extends Component {
     window.localStorage.setItem('now', "catlog")
   }
 
+  componentWillMount = () => {
+this.catalog()
+  }
+
+  
   render() {
     return (
 
