@@ -27,7 +27,7 @@ class Catalog extends Component {
                 } else {
                     if (text !== "") {
 
-                        const res = await axios.get(`http://www.omdbapi.com/?t=${text}+&apikey=67c20ef2&/`)
+                        const res = await axios.get(`https://www.omdbapi.com/?t=${text}+&apikey=67c20ef2&/`)
                         console.log(res.data)
 
                         let newMovie = {
@@ -71,8 +71,8 @@ class Catalog extends Component {
             < div >
                 {/* {console.log(myNewData.filter(m => m.isRented === true)[0] === undefined)} */}
 
-                <input name="testText" type="text" value={this.state.testText} onChange={this.updateTestText} placeholder="sarch form your movies" />
-                <input name="testText1" type="text" value={this.state.testText1} onChange={this.updateTestText} placeholder="sarch for new movie" />
+                <input name="testText" type="text" value={this.state.testText} onChange={this.updateTestText} placeholder="Search form your movies" />
+                <input name="testText1" type="text" value={this.state.testText1} onChange={this.updateTestText} placeholder="Search for new movie" />
 
                 <h1>
                     {this.state.newMovie ?
