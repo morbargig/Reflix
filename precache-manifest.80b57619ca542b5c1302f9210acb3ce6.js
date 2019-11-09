@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7aa2babdb4e6c0f12ba586054811603d",
+    "revision": "2366b13249556f21bbdcf97519a455f6",
     "url": "/Reflix/index.html"
   },
   {
-    "revision": "0568e745b04c930529a8",
+    "revision": "c8d1540556baa6f2af30",
     "url": "/Reflix/static/css/main.3161690f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Reflix/static/js/2.582f0e3f.chunk.js"
   },
   {
-    "revision": "0568e745b04c930529a8",
-    "url": "/Reflix/static/js/main.ccd76603.chunk.js"
+    "revision": "c8d1540556baa6f2af30",
+    "url": "/Reflix/static/js/main.b663ed8e.chunk.js"
   },
   {
     "revision": "c3bc20ee8027f25ebf87",
