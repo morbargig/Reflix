@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Reflix/static/css/main.3161690f.chunk.css",
+    "main.js": "/Reflix/static/js/main.ccd76603.chunk.js",
+    "main.js.map": "/Reflix/static/js/main.ccd76603.chunk.js.map",
+    "runtime~main.js": "/Reflix/static/js/runtime~main.36913413.js",
+    "runtime~main.js.map": "/Reflix/static/js/runtime~main.36913413.js.map",
+    "static/js/2.582f0e3f.chunk.js": "/Reflix/static/js/2.582f0e3f.chunk.js",
+    "static/js/2.582f0e3f.chunk.js.map": "/Reflix/static/js/2.582f0e3f.chunk.js.map",
+    "index.html": "/Reflix/index.html",
+    "precache-manifest.9c978c6c0756f50bdabeadbb64a65e4a.js": "/Reflix/precache-manifest.9c978c6c0756f50bdabeadbb64a65e4a.js",
+    "service-worker.js": "/Reflix/service-worker.js",
+    "static/css/main.3161690f.chunk.css.map": "/Reflix/static/css/main.3161690f.chunk.css.map"
+  }
+}
