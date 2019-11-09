@@ -106,9 +106,9 @@ class App extends Component {
           if (localStorage.getItem('now') !== "catlog") {
             let newArryIsRented = []
             let RentedMovies = movies.filter(c => c.isRented === true)
-            RentedMovies.map(x => {
+            RentedMovies.map(x => 
               newArryIsRented.push(x.id)
-            })
+            )
             // console.log(newArryIsRented)
             let userNow = localStorage.getItem('now')
             let b = JSON.parse(localStorage.getItem(userNow))
@@ -129,9 +129,9 @@ class App extends Component {
         if (localStorage.getItem('now') !== "catlog") {
           let newArryIsRented = []
           let RentedMovies = movies.filter(c => c.isRented === true)
-          RentedMovies.map(x => {
+          RentedMovies.map(x => 
             newArryIsRented.push(x.id)
-          })
+          )
           // console.log(newArryIsRented)
           let userNow = localStorage.getItem('now')
           let b = JSON.parse(localStorage.getItem(userNow))
@@ -181,7 +181,7 @@ let newMovie1 = {...newMovie}
           <Route path="/" exact render={() => <Landing users={this.state.users} movies={this.state.movies} pushNewUser={this.pushNewUser} />} />
           <Route path="/Catalog" exact render={() => <Catalog addNewMovie={this.addNewMovie} movies={this.state.movies} isRented={this.isRented} />} />
           {/* <Route path="/Moveis/:id" exact render={() => <Catalog movies={this.state.movies} isRented={this.isRented} />} /> */}
-          <Route path="/Moveis/:id" exact render={({ match }) => (this.state.movies.find(m => m.id == match.params.id) ? (<MovieDetail match={match} movies={this.state.movies} />) : (<Catalog />))} />
+          <Route path="/Moveis/:id" exact render={({ match }) => (this.state.movies.find(m => m.id === match.params.id) ? (<MovieDetail match={match} movies={this.state.movies} />) : (<Catalog />))} />
 
           {/* <Route path="/Catalog/:id" exact render={({ match }) => (this.state[match.params.id] ? (<Catalog match={match} state={this.state} />) : (<Landing />))} /> */}
           {/* <a onClick={this.isRented}> sfhfjdnkbjdsnfkbjndsfk</a> */}

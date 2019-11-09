@@ -6,8 +6,8 @@ class Landing extends Component {
     localStorage = (e) => {
         let name = e.target.text
         window.localStorage.setItem('now' ,name)
-        if (window.localStorage.getItem(name) == null) {
-            let user = this.props.users.find(u => u.name == name)
+        if (window.localStorage.getItem(name) === null) {
+            let user = this.props.users.find(u => u.name === name)
             window.localStorage.setItem(name, JSON.stringify(user))
             this.localStorage(e)
             // window.localStorage.setItem('now' ,name)

@@ -83,9 +83,9 @@ class Catalog extends Component {
                         null
                     }
                     {myNewData.filter(m => m.isRented === true)[0] !== undefined ? "Rented :" : null}
-                    {myNewData.filter(m => m.isRented == true).map(m => < Movie m={m} isRented={this.props.isRented} />)}
+                    {myNewData.filter(m => m.isRented === true).map(m => < Movie m={m} isRented={this.props.isRented} />)}
                     {myNewData.filter(m => m.isRented === false)[0] !== undefined ? "Movies :" : null}
-                    {myNewData.filter(m => m.isRented == false).map(m => < Movie m={m} isRented={this.props.isRented} />)}
+                    {myNewData.filter(m => m.isRented === false).map(m => < Movie m={m} isRented={this.props.isRented} />)}
                 </h1>
             </div >)
     }
